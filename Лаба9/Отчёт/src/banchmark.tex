@@ -1,0 +1,18 @@
+\section{Тест производительности}
+
+\begin{alltt}
+root@DESKTOP-5HM2HTK:~# g++ generator.cpp
+root@DESKTOP-5HM2HTK:~# ./a.out tests
+root@DESKTOP-5HM2HTK:~# g++ benchmark.cpp
+root@DESKTOP-5HM2HTK:~# ./a.out <tests/1.t
+N is: 10000
+M is: 100000
+Edmonds-Karp algorithm time: 467ms
+Ford-Fulkerson algoritm time: 1398ms
+root@DESKTOP-5HM2HTK:~#
+\end{alltt}
+
+Как видно, алгоритм Эдмондса-Карпа работает примерно в три раза быстрее, чем алгоритм Форда-Фалкерсона. Это объясняется тем, то первым алгоритм реже использует уже пройденные рёбра, поэтому все остальные рёбра заполняются значительно быстрее, а значит поиск максимального потока занимает меньшее количество времени.
+
+\pagebreak
+

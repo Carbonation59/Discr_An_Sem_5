@@ -1,0 +1,17 @@
+\section{Тест производительности}
+
+\begin{alltt}
+root@DESKTOP-5HM2HTK:~# g++ generator.cpp
+root@DESKTOP-5HM2HTK:~# ./a.out tests
+root@DESKTOP-5HM2HTK:~# g++ benchmark.cpp
+root@DESKTOP-5HM2HTK:~# ./a.out <tests/1.t
+Size of field is: 1000 X 1000
+DP algorithm time: 273ms
+Simple algoritm time: 1020ms
+root@DESKTOP-5HM2HTK:~#
+\end{alltt}
+
+Как видно, алгоритм динамического программирования работает почти в 4 раза быстрее, чем наивный. Это неудивительно, ведь алгоритм на гистограммах проходит всё поле ровно один раз, а не несколько, как происходит в простом алгоритме
+
+\pagebreak
+

@@ -1,0 +1,18 @@
+\section{Тест производительности}
+
+\begin{alltt}
+root@DESKTOP-5HM2HTK:~# g++ generator.cpp
+root@DESKTOP-5HM2HTK:~# ./a.out tests
+root@DESKTOP-5HM2HTK:~# g++ benchmark.cpp
+root@DESKTOP-5HM2HTK:~# ./a.out <tests/1.t
+N is: 1000
+M is: 1000
+DP algorithm time: 337ms
+Simple algoritm time: 2152ms
+root@DESKTOP-5HM2HTK:~#
+\end{alltt}
+
+Как видно, жадный алгоритм работает значительно быстрее, чем наивный. Это неудивительно, ведь в жадном алгоритме каждое уравнение берётся ровно один раз, а в наивном подбираются все возможные варианты построения системы.
+
+\pagebreak
+
